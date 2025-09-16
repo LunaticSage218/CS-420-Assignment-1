@@ -1,10 +1,10 @@
-🎮 How to Play
+* How to Play
 
-Start the Game
+** Start the Game
 
 Click the Run Project button in the top-right corner of the Godot editor.
 
-Controls
+** Controls
 
 ⬅️ Left Arrow – Move Left
 
@@ -18,7 +18,7 @@ Controls
 
 ⬇️ Down Arrow – Attack Right
 
-Game Rules
+** Game Rules
 
 Win Condition 🏆 – Defeat five Red Ribbon Army soldiers.
 
