@@ -1,4 +1,4 @@
-# Dragon Ball Mini Game
+# Bulma In Trouble!? Save Her Goku!
 
 A simple 2D Godot game where you fight against the Red Ribbon Army.
 
