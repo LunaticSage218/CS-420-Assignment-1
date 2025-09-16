@@ -28,9 +28,3 @@ Click the **Run Project** button in the top-right corner of the Godot editor.
 1. Clone or download this repository  
 2. Open the project in [Godot Engine](https://godotengine.org/)  
 3. Press **▶️ Run Project**  
-
----
-
-## 📜 License
-
-This project is for educational/demo purposes.
