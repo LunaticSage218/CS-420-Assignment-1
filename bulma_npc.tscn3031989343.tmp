@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd7kwl40wbyfy"]
+
+[ext_resource type="Texture2D" uid="uid://cuvxl76ygpcf1" path="res://bulma.png" id="1_gunka"]
+[ext_resource type="Script" uid="uid://icpak1gbjqvn" path="res://bulma_npc.gd" id="1_scfsh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gunka"]
+radius = 5.65
+
+[node name="Bulma" type="CharacterBody2D"]
+script = ExtResource("1_scfsh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_gunka")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(20, 20)
+shape = SubResource("CapsuleShape2D_gunka")

@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwg5kne7tq1h4"]
+
+[ext_resource type="Script" uid="uid://8e51opkhxxb5" path="res://player.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://dr3seewggg06j" path="res://kid_goku_attack.png" id="2_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://j58giryy6h3k" path="res://kid_goku_walk_0.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://jkd7d0o0sesw" path="res://kid_goku_idle.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://cbirwgqnrb5l4" path="res://kid_goku_walk_1.png" id="3_sweqy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2hs0m")
+}],
+"loop": true,
+"name": &"fight",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sweqy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hqtel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sweqy")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1jxqw"]
+radius = 78.0
+height = 378.0
+
+[node name="player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_i3pqv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player"]]
+position = Vector2(-12, 26)
+scale = Vector2(0.270652, 0.277971)
+sprite_frames = SubResource("SpriteFrames_2hs0m")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1jxqw")
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CapsuleShape2D_1jxqw")

@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyfwknsvwhvfv"]
+
+[ext_resource type="Texture2D" uid="uid://bk004ftg2s6xn" path="res://wood_floor.jpg" id="1_vonw3"]
+[ext_resource type="PackedScene" uid="uid://dwg5kne7tq1h4" path="res://player.tscn" id="2_oi3di"]
+[ext_resource type="PackedScene" uid="uid://cd7kwl40wbyfy" path="res://bulma_npc.tscn" id="3_oi3di"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u52ul"]
+size = Vector2(2000, 425)
+
+[node name="Level" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(1000, 787.5)
+shape = SubResource("RectangleShape2D_u52ul")
+
+[node name="player" parent="." instance=ExtResource("2_oi3di")]
+position = Vector2(259, 414)
+
+[node name="FloorImage0" type="Sprite2D" parent="."]
+position = Vector2(226.5, 789.5)
+scale = Vector2(1.72692, 1.67181)
+texture = ExtResource("1_vonw3")
+
+[node name="FloorImage1" type="Sprite2D" parent="."]
+position = Vector2(652, 789.5)
+scale = Vector2(1.559, 1.672)
+texture = ExtResource("1_vonw3")
+
+[node name="FloorImage2" type="Sprite2D" parent="."]
+position = Vector2(1057, 789.5)
+scale = Vector2(1.559, 1.672)
+texture = ExtResource("1_vonw3")
+
+[node name="FloorImage3" type="Sprite2D" parent="."]
+position = Vector2(1462, 789.5)
+scale = Vector2(1.559, 1.672)
+texture = ExtResource("1_vonw3")
+
+[node name="FloorImage4" type="Sprite2D" parent="."]
+position = Vector2(1832.83, 789.5)
+scale = Vector2(1.2936, 1.672)
+texture = ExtResource("1_vonw3")
+
+[node name="Bulma" parent="." instance=ExtResource("3_oi3di")]
+position = Vector2(1190, 306)
+scale = Vector2(0.75, 0.75)

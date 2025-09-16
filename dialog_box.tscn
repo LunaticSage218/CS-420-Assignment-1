@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://4e0pc3ecttuo"]
+
+[ext_resource type="Script" uid="uid://dc2tomlfpwhxx" path="res://dialog_box.gd" id="1_hwgul"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_abc123"]
+font_size = 28
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="DialogBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hwgul")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -200.0
+offset_right = 500.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Background" type="ColorRect" parent="Panel"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.9)
+
+[node name="Border" type="ColorRect" parent="Panel"]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 0, 1)
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Sample dialog text"
+label_settings = SubResource("LabelSettings_abc123")
+horizontal_alignment = 1
+vertical_alignment = 1

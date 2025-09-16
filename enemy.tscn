@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf58byhrq8agg"]
+
+[ext_resource type="Script" uid="uid://wbkula3eq6dj" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://fp5rsnp7qlqh" path="res://red_ribbon_army_soldier_0.png" id="1_7k104"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4gyqm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7k104")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7k104"]
+radius = 7.4
+height = 31.6
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
+collision_layer = 4
+script = ExtResource("1_4gyqm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(103, 5)
+sprite_frames = SubResource("SpriteFrames_4gyqm")
+animation = &"run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(15, 15)
+shape = SubResource("CapsuleShape2D_7k104")
+
+[node name="AttackBox" type="Area2D" parent="."]
+collision_layer = 0
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackBox"]
+scale = Vector2(15, 15)
+shape = SubResource("CapsuleShape2D_7k104")

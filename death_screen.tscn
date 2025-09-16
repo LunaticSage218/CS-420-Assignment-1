@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://death123"]
+
+[ext_resource type="Script" path="res://death_screen.gd" id="1_death"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_color = Color(1, 0, 0, 1)
+font_size = 48
+outline_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_text"]
+font_color = Color(1, 1, 1, 1)
+font_size = 24
+outline_color = Color(0, 0, 0, 1)
+outline_size = 2
+
+[node name="DeathScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_death")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.2, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -150.0
+offset_right = 300.0
+offset_bottom = 150.0
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_title")
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+modulate = Color(1, 1, 1, 0)
+
+[node name="Message" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Goku was defeated by the Red Ribbon Army!
+Better luck next time!"
+label_settings = SubResource("LabelSettings_text")
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+modulate = Color(1, 1, 1, 0)
+
+[node name="RestartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "TRY AGAIN"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "MAIN MENU"

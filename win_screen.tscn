@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl1vrbqy4gac3"]
+
+[ext_resource type="Script" uid="uid://dqt68b8wxoda4" path="res://win_screen.gd" id="1_win"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 48
+font_color = Color(1, 1, 0, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_text"]
+font_size = 24
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_win")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.3, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -150.0
+offset_right = 300.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "VICTORY!"
+label_settings = SubResource("LabelSettings_title")
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Message" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Congratulations, Goku!
+You defeated all 5 Red Ribbon Army soldiers!
+The world is safe once again!"
+label_settings = SubResource("LabelSettings_text")
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="PlayAgainButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "PLAY AGAIN"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "MAIN MENU"

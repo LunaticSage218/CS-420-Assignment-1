@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1dq4o7ivj1nh"]
+
+[ext_resource type="Script" uid="uid://dutwwem2rnpaq" path="res://start_screen.gd" id="1_start"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 48
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_text"]
+font_size = 20
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_start")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0.3, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -250.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Bulma In Trouble!?
+Save Her Goku!
+"
+label_settings = SubResource("LabelSettings_title")
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Controls" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "CONTROLS:
+← → Arrow Keys: Move Left/Right
+Space: Jump
+↑ ↓ Arrow Keys: Attack Left/Right
+Enter: Interact
+
+GOAL: Defeat 5 Red Ribbon Army soldiers!
+Attack enemies from the correct direction or miss!
+Don't run into them or you die!"
+label_settings = SubResource("LabelSettings_text")
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "START GAME"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "QUIT"
