@@ -1,34 +1,36 @@
-* How to Play
+# Dragon Ball Mini Game
 
-** Start the Game
+A simple 2D Godot game where you fight against the Red Ribbon Army.
 
-Click the Run Project button in the top-right corner of the Godot editor.
+---
 
-** Controls
+## 🎮 How to Play
 
-⬅️ Left Arrow – Move Left
+### ▶️ Start the Game
+Click the **Run Project** button in the top-right corner of the Godot editor.
 
-➡️ Right Arrow – Move Right
+### ⌨️ Controls
+- ⬅️ **Left Arrow** – Move Left  
+- ➡️ **Right Arrow** – Move Right  
+- ␣ **Space** – Jump  
+- ↵ **Enter** – Interact  
+- ⬆️ **Up Arrow** – Attack Left  
+- ⬇️ **Down Arrow** – Attack Right  
 
-␣ Space – Jump
+### 🕹️ Game Rules
+- **Win Condition 🏆** – Defeat **five Red Ribbon Army soldiers**  
+- **Lose Condition ❌** – Run into enemies  
 
-↵ Enter – Interact
+---
 
-⬆️ Up Arrow – Attack Left
+## 🚀 Getting Started
 
-⬇️ Down Arrow – Attack Right
+1. Clone or download this repository  
+2. Open the project in [Godot Engine](https://godotengine.org/)  
+3. Press **▶️ Run Project**  
 
-** Game Rules
+---
 
-Win Condition 🏆 – Defeat five Red Ribbon Army soldiers.
+## 📜 License
 
-Lose Condition ❌ – Run into enemies.
-
-🚀 Getting Started
-
-Clone or download this repository.
-
-Open the project in Godot Engine
-.
-
-Press ▶️ Run Project.
+This project is for educational/demo purposes.
