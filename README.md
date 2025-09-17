@@ -4,12 +4,12 @@ A simple 2D Godot game where you fight against the Red Ribbon Army.
 
 ---
 
-## 🎮 How to Play
+## How to Play
 
-### ▶️ Start the Game
+### Start the Game
 Click the **Run Project** button in the top-right corner of the Godot editor.
 
-### ⌨️ Controls
+### Controls
 - ⬅️ **Left Arrow** – Move Left  
 - ➡️ **Right Arrow** – Move Right  
 - ␣ **Space** – Jump  
@@ -17,13 +17,13 @@ Click the **Run Project** button in the top-right corner of the Godot editor.
 - ⬆️ **Up Arrow** – Attack Left  
 - ⬇️ **Down Arrow** – Attack Right  
 
-### 🕹️ Game Rules
-- **Win Condition 🏆** – Defeat **five Red Ribbon Army soldiers**  
-- **Lose Condition ❌** – Run into enemies  
+### Game Rules
+- **Win Condition** – Defeat **five Red Ribbon Army soldiers**  
+- **Lose Condition** – Run into enemies  
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. Clone or download this repository  
 2. Open the project in [Godot Engine](https://godotengine.org/)  
